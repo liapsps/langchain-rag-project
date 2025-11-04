@@ -120,14 +120,24 @@ def main():
     # Ele recebe o contexto ({context}) que veio do FAISS e a pergunta do usuário ({question}).
     # Isso ajuda a evitar que o modelo "alucine" e a garantir respostas baseadas nos fatos do documento.
     prompt_template = """
-    Use os seguintes trechos de contexto para responder à pergunta no final.
-    Se você não sabe a resposta, apenas diga que não sabe, não tente inventar uma resposta.
-    Use no máximo três frases e mantenha a resposta o mais concisa possível.
+    Você é um assistente de IA especialista, focado em responder perguntas sobre o artigo "Attention Is All You Need".
+    Sua resposta deve ser amigável e direta.
 
+    Use **apenas** os trechos de contexto fornecidos abaixo para formular sua resposta.
+    - Não invente informações que não estejam no texto.
+    - Se a resposta não puder ser encontrada no contexto, diga educadamente: "Desculpe, mas não encontrei essa informação específica no documento."
+
+    Limites da Resposta:
+    - Mantenha a resposta o mais concisa possível.
+    - Use no máximo três frases.
+
+    Contexto Fornecido:
     {context}
 
-    Pergunta: {question}
-    Resposta útil:"""
+    Pergunta do Usuário:
+    {question}
+
+    Resposta Amigável:"""
 
     PROMPT = PromptTemplate(
         template=prompt_template, input_variables=["context", "question"]
