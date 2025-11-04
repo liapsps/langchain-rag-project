@@ -21,7 +21,3 @@
 
 **Fontes (Trechos):**
 > [Citação 1: "...cole o trecho..."]
-
----
-
-(Repita para todas as 10 perguntas)
