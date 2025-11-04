@@ -62,7 +62,8 @@ def main():
     # 'chunk_size=1000' define o tamanho de cada pedaço e 'chunk_overlap=150' cria uma sobreposição
     # para não perdermos o contexto entre os chunks.
     print("Dividindo o documento em chunks...")
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+    # text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     docs = text_splitter.split_documents(documents)
     print(f"Documento dividido em {len(docs)} chunks.")
 
@@ -145,7 +146,7 @@ def main():
     
     # O 'retriever' é o componente responsável por buscar os documentos no FAISS.
     # 'search_kwargs={"k": 3}' significa que ele vai buscar os 3 chunks mais relevantes para a pergunta.
-    retriever = db.as_retriever(search_kwargs={"k": 1}) #parâmetros do FAISS (olhar documentação): score de similaridade, tipos de busca
+    retriever = db.as_retriever(search_kwargs={"k": 3}) #parâmetros do FAISS (olhar documentação): score de similaridade, tipos de busca
     
     # Finalmente, monto a cadeia 'RetrievalQA'.
     # Ela junta o LLM, o retriever e o prompt.
@@ -165,9 +166,16 @@ def main():
     # Para validar, criei uma lista de perguntas sobre o artigo e iterei sobre elas,
     # mostrando a pergunta, a resposta do modelo e os trechos que ele usou como fonte.
     perguntas = [
-        "What is the main topic of the document?",
-        "What is a Transformer?",
-        "How does multi-head attention work?"
+        "O que é a arquitetura Transformer?",
+        "Qual o principal problema que o Transformer resolve em relação a RNNs e LSTMs?",
+        "Como funciona o mecanismo de 'Multi-Head Attention'?",
+        "Qual a diferença entre o Encoder e o Decoder na arquitetura Transformer?",
+        "O que é 'self-attention'?",
+        "O que são 'positional encodings' e por que são necessários?",
+        "O que é a 'Scaled Dot-Product Attention'?",
+        "Em quais tarefas o Transformer foi avaliado no artigo?",
+        "Quais os principais resultados de benchmark do Transformer mencionados no paper?",
+        "Por que o artigo se chama 'Attention Is All You Need'?"
     ]
     
     for pergunta in perguntas:
