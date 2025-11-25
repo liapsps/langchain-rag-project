@@ -70,21 +70,21 @@ Follow the steps below to run the application on your local machine.
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git]
-    cd YOUR_REPOSITORY_NAME
+    git clone https://github.com/YOUR_USERNAME/projeto-rag.git
+    cd projeto-rag
     ```
 
 2.  **Create a virtual environment and install dependencies:**
 
     ```bash
     # Create the environment
-    python -m venv .venv
+    python -m venv venv
 
     # Activate the environment (Windows)
-    .venv\Scripts\activate
+    venv\Scripts\activate
 
     # Activate the environment (Linux/macOS)
-    source .venv/bin/activate
+    source venv/bin/activate
 
     # Install all required libraries from the file
     pip install -r requirements.txt
@@ -112,11 +112,14 @@ The script will execute the entire process: it will load the PDF, create the vec
 
 ```
 /
-├── app.py                      # Main script containing all the RAG logic
-├── requirements.txt            # All project dependencies
-├── attention_is_all_you_need.pdf # The knowledge base for our system
+├── app.py                               # Main script containing all the RAG logic
+├── requirements.txt                     # All project dependencies
+├── attention_is_all_you_need.pdf        # The knowledge base for our system
+├── .env                                 # API keys configuration (not in git)
+├── .gitignore                           # Git ignore rules
+├── venv/                                # Virtual environment directory
 |
-├── gabarito_notebooklm.md      # The "golden set" (benchmark) of 10 Q&A pairs
-├── comparacao_RAG_vs_NotebookLM.md # Side-by-side analysis of RAG vs. baseline
-└── SPRINT_REVIEW.md            # Research notes (Vector DBs, FAISS, Latency)
+├── gabarito_notebooklm.md               # The "golden set" (benchmark) of 10 Q&A pairs
+├── comparacao_RAG_vs_NotebookLM.md      # Side-by-side analysis of RAG vs. baseline
+└── sprint1_review.md                    # Research notes (Vector DBs, FAISS, Latency)
 ```
