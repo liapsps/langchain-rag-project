@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
   <diagram name="Página-1" id="vRP67zhrp5_v3Nk192Wu">
-    <mxGraphModel dx="2571" dy="930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2169" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,7 +23,7 @@
           <mxGeometry height="54" width="176" x="36.5" y="1260" as="geometry" />
         </mxCell>
         <mxCell id="c_Flp8KVWSernfDbJFEK-7" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Embedding: all-MiniLM-L6-v2" vertex="1">
-          <mxGeometry height="78" width="260" x="-5" y="1354" as="geometry" />
+          <mxGeometry height="78" width="260" x="-5.5" y="1370" as="geometry" />
         </mxCell>
         <mxCell id="kc55eucOndH0o1L9-qAX-31" edge="1" parent="1" source="c_Flp8KVWSernfDbJFEK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="c_Flp8KVWSernfDbJFEK-11">
           <mxGeometry relative="1" as="geometry" />
@@ -105,7 +105,7 @@
           <mxGeometry height="40" width="181" x="48" y="800" as="geometry" />
         </mxCell>
         <mxCell id="kc55eucOndH0o1L9-qAX-21" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Fase 2: Geração (RAG)&lt;/span&gt;" vertex="1">
-          <mxGeometry height="40" width="130" x="535" y="800" as="geometry" />
+          <mxGeometry height="40" width="130" x="524.5" y="800" as="geometry" />
         </mxCell>
         <mxCell id="kc55eucOndH0o1L9-qAX-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Pergunta" vertex="1">
           <mxGeometry height="30" width="60" x="660" y="880" as="geometry" />
